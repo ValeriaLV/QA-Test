@@ -1,0 +1,128 @@
+{
+	"info": {
+		"_postman_id": "cbc8345f-eca3-4f47-9e0e-6370bc266554",
+		"name": "QA Test ",
+		"description": "Collection for test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://users.bugred.ru/tasks/rest/doregister",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"testset@test.test\",\r\n    \"name\": \" Testun\",\r\n    \"password\": \"testset\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/doregister",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"doregister"
+					]
+				},
+				"description": "User Creating"
+			},
+			"response": []
+		},
+		{
+			"name": "http://users.bugred.ru/tasks/rest/createcompany",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"company_name\": \"TestCompanyName\",\r\n  \"company_type\": \"ИП\",\r\n  \"company_users\": [\"testset@test.test\"],\r\n  \"email_owner\": \"testset@test.test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/createcompany",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"createcompany"
+					]
+				},
+				"description": "Company Creating"
+			},
+			"response": []
+		},
+		{
+			"name": "http://users.bugred.ru/tasks/rest/createuserwithtasks",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"email\": \"testset2@test.test\",\r\n \"name\": \"Testun 2\",\r\n \"tasks\": [{\r\n   \"title\": \"Testun 2 Task 1\",\r\n   \"description\": \"Some description for task 1\"\r\n  },\r\n  {\r\n   \"title\": \"Testun 2 Task 2\",\r\n   \"description\": \"Some description for task 2\"\r\n  }\r\n ],\r\n \"companies\": [8123]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/createuserwithtasks",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"createuserwithtasks"
+					]
+				},
+				"description": "Creating user with tasks"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
